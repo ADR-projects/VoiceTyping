@@ -1,3 +1,6 @@
+## Please use Google Chrome on a desktop for full functionality.
+(backend yet to be added)
+
 ### Features:
 1. Speak endlessly, your notes won't get deleted.
 2. Lots of Languages included.
