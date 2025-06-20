@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Typing-ADR</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>Type Using Your Voice!</h1>
+    <select id="lang">
+        <option value="en-IN">English (India)</option>
+        <option value="en-US">English (US)</option>
+        <option value="en-GB">English (UK)</option>
+        <option value="bn-IN">Bengali</option>
+        <option value="zh-CN">Chinese (Mandarin)</option>
+        <option value="de-DE">German</option>
+        <option value="fr-FR">French</option>
+        <option value="gu-IN">Gujarati</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="kn-IN">Kannada</option>
+        <option value="ml-IN">Malayalam</option>
+        <option value="mr-IN">Marathi</option>
+        <option value="pa-IN">Punjabi</option>
+        <option value="es-ES">Spanish (Spain)</option>
+        <option value="ta-IN">Tamil</option>
+        <option value="te-IN">Telugu</option>
+        <option value="ur-IN">Urdu</option>
+    </select>  
+    <button id="start">Speak Now</button> 
+    <div id="listeningIndicator"></div>
+    <div id="output">Here's your text...</div>
+    <button id="copy">Copy to Clipboard</button>
+    <button id="savePdf">Save as PDF</button>
+    <button id="clear">Clear Text</button>
+    <footer>
+        <p>© ADR_2025 All Rights Reserved</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>

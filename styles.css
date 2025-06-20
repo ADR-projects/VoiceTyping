@@ -1,0 +1,214 @@
+body {
+    background-image: url('vintagebggrid.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Emblema One", system-ui;
+    color: #3a1616;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+select {
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-right: 3px solid #c45050;
+    border-bottom: 3px solid #c45050;
+    border-radius: 8px;
+    background: #fffcf8;
+    width: 80%;
+    max-width: 300px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#start {
+   background-color: #ac3f3f;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   font-weight: bolder;
+    color: rgb(255, 253, 218);
+    font-size: 1.1rem;
+    padding: 12px 25px;
+
+    border-radius: 8px;
+    border-right: 4px solid #462d2d;
+    border-bottom: 4px solid #442727;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(59, 13, 13, 0.2);
+}
+
+#start:hover {
+    background: linear-gradient(45deg, #ee7d40, #e36927);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(42, 12, 12, 0.636);
+}
+
+#copy {
+    background-color: #488e5b;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-right: 3px solid #462d2d;
+    border-bottom: 4px solid #442727;
+    color: rgb(242, 255, 210);
+    font-size: 1rem;
+    padding: 12px 20px;
+   
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#copy:hover {
+    background: linear-gradient(45deg, #e0a800, #fbc41f);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#savePdf {
+    background: linear-gradient(135deg, #457ab3, #0056b3);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-right: 3px solid #462d2d;
+    border-bottom: 4px solid #442727;
+    color: white;
+    font-size: 1rem;
+    padding: 12px 25px;
+   
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+}
+
+#savePdf:hover {
+    background: linear-gradient(135deg, #208ec1, #6297b8);
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+#clear {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-right: 3px solid #462d2d;
+    border-bottom: 4px solid #442727;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+#clear:hover {
+    background: linear-gradient(135deg, #b21828, #e23045);
+    transform: scale(1.05);
+    letter-spacing: 1px;
+}
+
+@keyframes listeningAnimation {
+    0% { content: "Listening"; }
+    25% { content: "Listening."; }
+    50% { content: "Listening.."; }
+    75% { content: "Listening..."; }
+}
+
+#listeningIndicator::after {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    content: "Listening";
+    animation: listeningAnimation 1.5s infinite;
+    font-weight: bold;
+    color: #000a03;
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+#output {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 80%;
+    border-right: 3px solid #462d2d;
+    border-bottom: 4px solid #442727;
+    max-width: 500px;
+    min-height: 100px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    margin-top: -5px;
+    overflow-y: auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+#output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: #475d73a4;
+    border-radius: 2px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Making it Responsive */
+@media (max-width: 600px) {
+    select, button {
+        width: 90%;
+    }
+
+    #output {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+footer {
+    width: 100%;
+    background-color: #33333348;
+    color: white;
+    text-align: center;
+    padding: 5px 2px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 0.7rem;
+}
+
+footer p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
