@@ -6,4 +6,4 @@
 5. Clear all text with just a button.
 6. Cool retro design.
 
-### Link: 
+### Link: [https://voice-typing-adr.vercel.app/](https://voice-typing-adr.vercel.app/)
