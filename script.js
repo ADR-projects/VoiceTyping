@@ -5,6 +5,11 @@ const copyButton=document.getElementById('copy');
 const clearButton=document.getElementById('clear');
 const savePdfButton = document.getElementById('savePdf');
 
+if (!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)) {
+    alert("Sorry, speech recognition is not supported on your device. Please use Google Chrome on a desktop for full functionality.");
+    startButton.disabled = true;
+}
+
 const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
 recognition.continuous=true;
 recognition.interimResults=true;
